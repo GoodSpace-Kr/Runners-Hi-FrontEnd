@@ -1,18 +1,33 @@
+/* 전체 페이지 */
+.page {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  background-color: #ffffff;
+}
+
+/* 메인 컨테이너 */
 .container {
+  width: 100%;
+  max-width: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 80px;
-  width: 100dvw;
-  height: 100vh;
 }
 
+/* 로고 */
 .logo_section {
-  width: 500px;
-  height: 250px;
+  width: 420px;
+  height: 200px;
   position: relative;
+  flex-shrink: 0;
 }
 
+/* 로그인 섹션 */
 .login_section {
   width: 460px;
   display: flex;
@@ -20,22 +35,24 @@
   gap: 20px;
 }
 
+/* 타이틀 */
 .login_title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #353e3d;
 }
 
+/* 폼 */
 .login_form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .input {
-  height: 52px;
+  height: 56px;
   padding: 0 16px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid #e8e8e8;
   font-size: 1rem;
 }
@@ -45,40 +62,54 @@
   border-color: #675fed;
 }
 
+/* 로그인 버튼 */
 .login_button {
-  height: 54px;
-  border-radius: 16px;
+  height: 52px;
+  border-radius: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #675fed;
   color: white;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
-  border: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.25s ease, transform 0.1s ease;
 }
 
 .login_button:hover {
   background-color: #5d55e2;
 }
 
+.login_button:active {
+  transform: scale(0.97);
+}
+
+/* 구글 로그인 */
 .google_login_button {
-  height: 54px;
-  border-radius: 16px;
+  height: 52px;
+  border-radius: 18px;
   border: 1px solid #e8e8e8;
   display: flex;
   justify-content: center;
   align-items: center;
   gap: 8px;
+  font-size: 1rem;
   color: #757575;
-  cursor: pointer;
   background-color: white;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  transition: background-color 0.25s ease, transform 0.1s ease;
 }
 
 .google_login_button:hover {
   background-color: #f9fafb;
 }
 
+.google_login_button:active {
+  transform: scale(0.97);
+}
+
+/* 하단 링크 */
 .bottom_buttons {
   display: flex;
   justify-content: space-between;
@@ -94,4 +125,35 @@
 .back_button {
   color: #757575;
   text-decoration: none;
+}
+
+/* ======================= */
+/* 📱 모바일 & 웹앱 대응 */
+/* ======================= */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .logo_section {
+    width: 180px;
+    height: 80px;
+  }
+
+  .login_section {
+    width: 100%;
+    max-width: 360px;
+    align-items: stretch;
+  }
+
+  .login_title {
+    font-size: 1.6rem;
+  }
+
+  .bottom_buttons {
+    font-size: 0.9rem;
+  }
 }

@@ -1,46 +1,63 @@
+/* 전체 페이지 (웹앱 기준) */
+.page {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff;
+  padding: 24px 16px;
+}
+
+/* 메인 컨테이너 */
 .container {
+  width: 100%;
+  max-width: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;
-  flex-direction: row;
   gap: 80px;
-  width: 100dvw;
-  height: 100vh;
 }
 
+/* 로고 */
 .logo_section {
-  width: 500px;
-  height: 250px;
-  background-color: aliceblue;
+  width: 420px;
+  height: 200px;
   position: relative;
+  flex-shrink: 0;
 }
 
+/* 소개 영역 */
 .intro_section {
   width: 460px;
-  height: auto;
   display: flex;
   flex-direction: column;
-  gap: 16px;
+  gap: 20px;
 }
 
+/* 타이틀 */
 .main_title_sentence {
   font-size: 3rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #353e3d;
+  line-height: 1.2;
 }
 
-.sub_title_section {
-  font-size: 0.9rem;
+/* 서브 타이틀 */
+.sub_title_sentence {
+  font-size: 0.95rem;
   color: #757575;
+  line-height: 1.5;
 }
 
+/* 버튼 */
 .button_section {
   display: flex;
-  justify-content: space-between;
+  gap: 12px;
 }
 
 .local_login_button {
-  width: 48%;
+  flex: 1;
   height: 54px;
   border-radius: 16px;
   background-color: #675fed;
@@ -48,29 +65,75 @@
   justify-content: center;
   align-items: center;
   color: white;
+  font-weight: 600;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: all 0.25s ease;
+}
+
+.local_login_button:hover {
+  background-color: #5d55e2;
 }
 
 .google_login_button {
-  width: 48%;
+  flex: 1;
   height: 54px;
   border-radius: 16px;
   border: 1px solid #e8e8e8;
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction: row;
   gap: 8px;
   color: #757575;
   cursor: pointer;
-  transition: all 0.3s ease;
+  transition: background-color 0.25s ease;
 }
 
 .google_login_button:hover {
   background-color: #f9fafb;
 }
 
-.local_login_button:hover {
-  background-color: #5d55e2;
+/* ======================= */
+/* 📱 모바일 & 웹앱 대응 */
+/* ======================= */
+
+@media (max-width: 768px) {
+  .page {
+    padding: 16px;
+  }
+
+  .container {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .logo_section {
+    width: 180px;
+    height: 80px;
+  }
+
+  .intro_section {
+    width: 100%;
+    max-width: 360px;
+    align-items: center;
+  }
+
+  .main_title_sentence {
+    font-size: 1.8rem;
+  }
+
+  .button_section {
+    width: 100%;
+    height: 100px;
+    flex-direction: column;
+    gap: 14px;
+  }
+
+  .local_login_button,
+  .google_login_button {
+    width: 100%;
+    height: 64px;
+    border-radius: 18px;
+    font-size: 1rem;
+  }
 }
