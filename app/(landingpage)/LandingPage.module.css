@@ -1,0 +1,76 @@
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 80px;
+  width: 100dvw;
+  height: 100vh;
+}
+
+.logo_section {
+  width: 500px;
+  height: 250px;
+  background-color: aliceblue;
+  position: relative;
+}
+
+.intro_section {
+  width: 460px;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.main_title_sentence {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #353e3d;
+}
+
+.sub_title_section {
+  font-size: 0.9rem;
+  color: #757575;
+}
+
+.button_section {
+  display: flex;
+  justify-content: space-between;
+}
+
+.local_login_button {
+  width: 48%;
+  height: 54px;
+  border-radius: 16px;
+  background-color: #675fed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google_login_button {
+  width: 48%;
+  height: 54px;
+  border-radius: 16px;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  gap: 8px;
+  color: #757575;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.google_login_button:hover {
+  background-color: #f9fafb;
+}
+
+.local_login_button:hover {
+  background-color: #5d55e2;
+}
