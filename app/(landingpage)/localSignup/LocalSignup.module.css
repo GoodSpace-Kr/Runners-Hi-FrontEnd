@@ -1,18 +1,33 @@
+/* 전체 페이지 */
+.page {
+  width: 100%;
+  min-height: 100dvh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 24px 16px;
+  background-color: #ffffff;
+}
+
+/* 메인 컨테이너 */
 .container {
+  width: 100%;
+  max-width: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 80px;
-  width: 100dvw;
-  height: 100vh;
 }
 
+/* 로고 */
 .logo_section {
-  width: 500px;
-  height: 250px;
+  width: 420px;
+  height: 200px;
   position: relative;
+  flex-shrink: 0;
 }
 
+/* 회원가입 섹션 */
 .signup_section {
   width: 460px;
   display: flex;
@@ -20,22 +35,24 @@
   gap: 20px;
 }
 
+/* 타이틀 */
 .signup_title {
   font-size: 2rem;
-  font-weight: bold;
+  font-weight: 700;
   color: #353e3d;
 }
 
+/* 폼 */
 .signup_form {
   display: flex;
   flex-direction: column;
-  gap: 12px;
+  gap: 14px;
 }
 
 .input {
   height: 52px;
   padding: 0 16px;
-  border-radius: 12px;
+  border-radius: 14px;
   border: 1px solid #e8e8e8;
   font-size: 1rem;
 }
@@ -45,28 +62,66 @@
   border-color: #675fed;
 }
 
+/* 회원가입 버튼 */
 .signup_button {
-  height: 54px;
-  border-radius: 16px;
+  height: 52px;
+  border-radius: 18px;
   background-color: #675fed;
   color: white;
   font-size: 1rem;
   font-weight: 600;
   cursor: pointer;
   border: none;
-  transition: all 0.3s ease;
+  transition: background-color 0.25s ease, transform 0.1s ease;
 }
 
 .signup_button:hover {
   background-color: #5d55e2;
 }
 
+.signup_button:active {
+  transform: scale(0.97);
+}
+
+/* 하단 링크 */
 .bottom_buttons {
   display: flex;
   justify-content: flex-start;
+  margin-top: 8px;
 }
 
 .back_button {
   color: #757575;
   text-decoration: none;
+}
+
+/* ======================= */
+/* 📱 모바일 & 앱 대응 */
+/* ======================= */
+
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column;
+    gap: 32px;
+    text-align: center;
+  }
+
+  .logo_section {
+    width: 180px;
+    height: 80px;
+  }
+
+  .signup_section {
+    width: 100%;
+    max-width: 360px;
+    align-items: stretch;
+  }
+
+  .signup_title {
+    font-size: 1.6rem;
+  }
+
+  .bottom_buttons {
+    font-size: 0.9rem;
+  }
 }
