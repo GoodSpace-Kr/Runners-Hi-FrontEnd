@@ -11,10 +11,10 @@ export default function Footer() {
         <Link href="/homePage" className={styles.footer_button_item}>
           <HiOutlineHome className={styles.footer_button_item_logo} />홈
         </Link>
-        <div className={styles.footer_button_item}>
+        <Link href="/crewRecordPage" className={styles.footer_button_item}>
           <IoClipboardOutline className={styles.footer_button_item_logo} />
           크루 기록
-        </div>
+        </Link>
         <div className={styles.footer_button_item}>
           <IoChatbubbleOutline className={styles.footer_button_item_logo} />
           커뮤니티

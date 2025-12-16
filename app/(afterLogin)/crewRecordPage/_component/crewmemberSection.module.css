@@ -1,0 +1,66 @@
+.crew_member_section {
+  width: 100%;
+  max-width: 536px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.crew_member_section_item {
+  width: 100%;
+  max-width: 100%;
+  height: 56px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.crew_member_section_item_info {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.crew_member_section_item_grade {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.crew_member_section_item_person {
+  display: flex;
+  flex-direction: column;
+}
+
+.person_name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.person_level {
+  font-size: 14px;
+  color: #757575;
+}
+
+.profile_button {
+  height: 32px;
+  padding: 0 12px;
+  border-radius: 16px;
+  background-color: #dfedfe;
+  color: #368bb5;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.profile_button:hover {
+  background-color: #eff6ff;
+}

@@ -1,0 +1,32 @@
+.filter_box {
+  width: 100%;
+  max-width: 320px;
+  height: 44px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.filter_box_item {
+  width: 70px;
+  height: 44px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 12px;
+  color: #757575;
+  cursor: pointer;
+  transition: background-color 0.25s ease;
+}
+
+.filter_box_item:hover {
+  background-color: #757575;
+  color: white;
+}
+
+.filter_box_item:focus {
+  background-color: #757575;
+  color: white;
+}
