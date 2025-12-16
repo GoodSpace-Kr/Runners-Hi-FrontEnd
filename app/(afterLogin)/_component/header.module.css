@@ -1,0 +1,32 @@
+.header {
+  width: 100%;
+  max-width: 576px;
+  height: 64px;
+  padding: 0 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-shrink: 0; /* 줄어들지 않게 */
+}
+
+.logo {
+  width: 100px;
+  position: relative;
+}
+
+.profile {
+  width: 64px;
+  height: 64px;
+  padding: 8px;
+  background-color: #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.profile_logo {
+  width: 24px;
+  height: 24px;
+  color: #353e3d;
+  cursor: pointer;
+}
