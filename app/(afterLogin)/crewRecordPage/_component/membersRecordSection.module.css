@@ -1,0 +1,74 @@
+.members_record_section {
+  width: 100%;
+  max-width: 536px;
+  min-height: 360px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+}
+
+.date {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.record_item {
+  width: 100%;
+  max-width: 360px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.record_item_member {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+}
+
+.member_name {
+  font-size: 18px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.member_level {
+  font-size: 14px;
+  color: #757575;
+  display: flex;
+  align-items: center;
+}
+
+.record_item_result {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.record_item_result_left {
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.result_circle {
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background-color: #b6eef0;
+}
+
+.record_item_result_right {
+  color: #757575;
+  font-size: 14px;
+}

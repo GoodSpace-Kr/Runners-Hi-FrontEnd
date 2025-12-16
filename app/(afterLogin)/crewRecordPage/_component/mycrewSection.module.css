@@ -1,0 +1,59 @@
+.my_crew_section {
+  width: 100%;
+  max-width: 536px;
+  background-color: #ffffff;
+  border: 1px solid #e8e8e8;
+  border-radius: 12px;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.my_crew_section_header {
+  width: 100%;
+  max-width: 100%;
+  font-size: 12px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+}
+
+.my_crew_section_detail {
+  width: 100%;
+  max-width: 100%;
+  display: flex;
+  flex-direction: row;
+  gap: 8px;
+}
+
+.my_crew_circle {
+  width: 48px;
+  height: 48px;
+  background-color: #eff6ff;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.my_crew_circle_logo {
+  width: 24px;
+  height: 24px;
+  color: #3b82f6;
+}
+
+.my_crew_info {
+  display: flex;
+  flex-direction: column;
+}
+
+.my_crew_name {
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.my_crew_count {
+  font-size: 14px;
+  color: #757575;
+}
