@@ -1,5 +1,6 @@
 "use client";
 
+import { useRouter } from "next/navigation";
 import { useState } from "react";
 import styles from "./welcomePage.module.css";
 import Image from "next/image";
@@ -10,7 +11,7 @@ type Character = "man" | "woman";
 export default function WelcomePage() {
   const [hovered, setHovered] = useState<Character | null>(null);
   const [selected, setSelected] = useState<Character | null>(null);
-
+  const router = useRouter();
   const isActive = (c: Character) => hovered === c || selected === c;
 
   return (
@@ -56,7 +57,14 @@ export default function WelcomePage() {
 
       {/* 하단 고정 버튼 */}
       <footer className={styles.footer}>
-        <button className={styles.selectButton} disabled={!selected}>
+        <button
+          className={styles.selectButton}
+          disabled={!selected}
+          onClick={() => {
+            if (!selected) return;
+            router.push("/homePage");
+          }}
+        >
           선택하기
         </button>
       </footer>

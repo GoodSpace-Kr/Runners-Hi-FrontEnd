@@ -1,0 +1,16 @@
+import Image from "next/image";
+import styles from "./header.module.css";
+import { IoPersonSharp } from "react-icons/io5";
+
+export default function Header() {
+  return (
+    <div className={styles.header}>
+      <div className={styles.logo}>
+        <Image src="/RunnersHiLogo.png" alt="RunnersHi logo" fill priority style={{ objectFit: "contain" }} />
+      </div>
+      <div className={styles.profile}>
+        <IoPersonSharp className={styles.profile_logo} />
+      </div>
+    </div>
+  );
+}
