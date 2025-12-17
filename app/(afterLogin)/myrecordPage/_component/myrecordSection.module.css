@@ -1,15 +1,10 @@
-.members_record_section {
+.my_record_section {
   width: 100%;
   max-width: 536px;
   display: flex;
   flex-direction: column;
   gap: 20px;
   align-items: center;
-}
-
-.date {
-  font-size: 18px;
-  font-weight: 600;
 }
 
 .record_item {
@@ -21,25 +16,13 @@
   padding: 16px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 16px;
+  cursor: pointer;
 }
 
-.record_item_member {
-  display: flex;
-  flex-direction: row;
-  gap: 12px;
-}
-
-.member_name {
-  font-size: 18px;
+.my_name {
+  font-size: 16px;
   font-weight: 600;
-  display: flex;
-  align-items: center;
-}
-
-.member_level {
-  font-size: 14px;
-  color: #757575;
   display: flex;
   align-items: center;
 }
@@ -57,7 +40,7 @@
   gap: 8px;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
+  font-weight: 400;
 }
 
 .result_circle {
@@ -70,4 +53,7 @@
 .record_item_result_right {
   color: #757575;
   font-size: 14px;
+}
+.record_item:hover {
+  background-color: #f3f3f3;
 }
