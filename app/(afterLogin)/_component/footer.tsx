@@ -5,10 +5,15 @@ import { IoClipboardOutline, IoChatbubbleOutline } from "react-icons/io5";
 import { HiOutlineHome } from "react-icons/hi2";
 import { PiRankingThin } from "react-icons/pi";
 import Link from "next/link";
+import NProgress from "nprogress";
 import { usePathname } from "next/navigation";
 
 export default function Footer() {
   const pathname = usePathname();
+
+  const handleClick = () => {
+    NProgress.start();
+  };
 
   const isActive = (href: string) => {
     return pathname === href || pathname.startsWith(href);
@@ -28,6 +33,7 @@ export default function Footer() {
           <Link
             key={item.href}
             href={item.href}
+            onClick={handleClick}
             className={`${styles.footer_button_item} ${isActive(item.href) ? styles.active : ""}`}
           >
             <item.icon className={styles.footer_button_item_logo} />
