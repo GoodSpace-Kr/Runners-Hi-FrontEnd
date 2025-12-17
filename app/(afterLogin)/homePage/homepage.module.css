@@ -10,15 +10,20 @@
 
 .body {
   width: 100vw;
-  flex: 1; /* ⭐ 남은 영역 차지 */
-  min-height: 0; /* ⭐⭐ 이거 없으면 절대 안 됨 */
-  overflow-y: auto; /* ⭐ body만 스크롤 */
-  -webkit-overflow-scrolling: touch; /* 모바일 부드러운 스크롤 */
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  -webkit-overflow-scrolling: touch;
   display: flex;
   justify-content: center;
   background-color: #f9fafb;
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
+  -ms-overflow-style: none;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
 }
 
 .body_section {

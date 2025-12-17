@@ -19,6 +19,11 @@
   background-color: #f9fafb;
   border-top: 1px solid #e8e8e8;
   border-bottom: 1px solid #e8e8e8;
+  -ms-overflow-style: none;
+}
+
+.body::-webkit-scrollbar {
+  display: none;
 }
 
 .body_section {
