@@ -38,7 +38,7 @@
 
 .filter_box {
   width: 100%;
-  max-width: 320px;
+  max-width: 220px;
   height: 44px;
   display: flex;
   justify-content: space-around;
@@ -176,13 +176,8 @@
 }
 
 .person_level {
-  font-size: 14px;
-  color: #757575;
-}
-
-.entire_rank_section_item_report {
   display: flex;
   align-items: center;
   font-size: 14px;
-  font-weight: 600;
+  color: #757575;
 }
