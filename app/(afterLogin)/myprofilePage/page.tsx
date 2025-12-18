@@ -5,17 +5,27 @@ import { IoChevronBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import { MdLogout } from "react-icons/md";
 import Image from "next/image";
-
+import NProgress from "nprogress";
 import Footer from "../_component/footer";
 
 export default function MyProfilePage() {
   const router = useRouter();
 
+  const handleProfileClick = () => {
+    NProgress.start();
+    router.push("/homePage");
+  };
+
+  const handleLogoutClick = () => {
+    NProgress.start();
+    router.push("/");
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <IoChevronBack className={styles.logo} onClick={() => router.push("/homePage")} />
-        <MdLogout className={styles.logo} />
+        <IoChevronBack className={styles.logo} onClick={handleProfileClick} />
+        <MdLogout className={styles.logo} onClick={handleLogoutClick} />
       </div>
       <div className={styles.body_top}>
         <div className={styles.body_top_section}>

@@ -5,14 +5,20 @@ import { IoChevronBack } from "react-icons/io5";
 import { useRouter } from "next/navigation";
 import Image from "next/image";
 import Footer from "../_component/footer";
+import NProgress from "nprogress";
 
 export default function OtherProfilePage() {
   const router = useRouter();
 
+  const handleProfileClick = () => {
+    NProgress.start();
+    router.push("/homePage");
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles.header}>
-        <IoChevronBack className={styles.logo} onClick={() => router.push("/crewRecordPage")} />
+        <IoChevronBack className={styles.logo} onClick={handleProfileClick} />
       </div>
       <div className={styles.body_top}>
         <div className={styles.body_top_section}>

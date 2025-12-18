@@ -54,6 +54,11 @@
 }
 
 .my_crew_count {
-  font-size: 14px;
+  font-size: 12px;
+  color: #757575;
+}
+
+.my_crew_level {
+  font-size: 12px;
   color: #757575;
 }
