@@ -16,48 +16,36 @@ export default function RankingPage() {
       name: "정상화",
       level: 5,
       region: "서울",
-      town: "강남",
-      distance: "120km",
     },
     {
       id: 2,
       name: "전병주",
       level: 5,
       region: "서울",
-      town: "강남",
-      distance: "110km",
     },
     {
       id: 3,
       name: "김준",
       level: 5,
       region: "서울",
-      town: "마포",
-      distance: "98km",
     },
     {
       id: 4,
       name: "김태우",
       level: 5,
       region: "경기",
-      town: "분당",
-      distance: "95km",
     },
     {
       id: 5,
       name: "김선호",
       level: 5,
       region: "경기",
-      town: "분당",
-      distance: "90km",
     },
     {
       id: 6,
       name: "권민석",
       level: 6,
       region: "경기",
-      town: "분당",
-      distance: "90km",
     },
   ];
 
@@ -65,12 +53,10 @@ export default function RankingPage() {
 
   const myName = "정상화";
   const myRegion = "서울";
-  const myTown = "강남";
 
   const filteredRanks = DUMMY_RANKS.filter((user) => {
     if (filter === "전체") return true;
     if (filter === "우리 지역") return user.region === myRegion;
-    if (filter === "우리 동네") return user.town === myTown;
     return true;
   });
 
@@ -84,7 +70,7 @@ export default function RankingPage() {
         <div className={styles.body_section}>
           {/* 필터 */}
           <div className={styles.filter_box}>
-            {["전체", "우리 지역", "우리 동네"].map((item) => (
+            {["전체", "우리 지역"].map((item) => (
               <div key={item} className={styles.filter_box_item} onClick={() => setFilter(item)}>
                 {item}
               </div>
@@ -119,11 +105,10 @@ export default function RankingPage() {
 
                   <div className={styles.entire_rank_section_item_person}>
                     <div className={styles.person_name}>{user.name}</div>
-                    <div className={styles.person_level}>LV. {user.level}</div>
                   </div>
                 </div>
 
-                <div className={styles.entire_rank_section_item_report}>{user.distance}</div>
+                <div className={styles.person_level}>LV. {user.level}</div>
               </div>
             ))}
           </div>
