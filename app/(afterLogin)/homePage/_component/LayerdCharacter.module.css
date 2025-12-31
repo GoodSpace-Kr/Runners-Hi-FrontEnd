@@ -1,0 +1,11 @@
+.canvas {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+
+  /* 픽셀 아트 렌더링 - 브라우저별 */
+  image-rendering: pixelated; /* Chrome, Edge */
+  image-rendering: -moz-crisp-edges; /* Firefox */
+  image-rendering: crisp-edges; /* Safari, 기타 */
+  -ms-interpolation-mode: nearest-neighbor; /* IE (레거시) */
+}

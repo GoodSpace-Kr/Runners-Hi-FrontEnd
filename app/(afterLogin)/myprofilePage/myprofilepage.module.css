@@ -17,7 +17,7 @@
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  flex-shrink: 0; /* 줄어들지 않게 */
+  flex-shrink: 0;
 }
 
 .logo {
@@ -41,44 +41,120 @@
 
 .body_top_section {
   width: 100%;
-  max-width: 536px;
-  padding: 0px 20px;
+  max-width: 400px;
+  padding: 16px 20px 8px 20px;
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 8px;
 }
 
-.character_img {
+/* 장착 아이템 + 캐릭터 컨테이너 */
+.equipment_container {
   width: 100%;
-  max-width: 200px;
+  max-width: 360px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+/* 양옆 장착 슬롯 */
+.equipment_side {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  flex-shrink: 0;
+}
+
+/* 중앙 캐릭터 영역 */
+.character_center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+/* 개별 장착 슬롯 */
+.equipment_slot {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+}
+
+/* 슬롯 아이콘 (크기 증가) */
+.slot_icon {
+  width: 64px; /* 52px → 64px */
+  height: 64px; /* 52px → 64px */
+  background-color: #ffffff;
+  border: 2px solid #e8e8e8;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  position: relative;
+  padding: 6px; /* 4px → 6px (내부 여백) */
+}
+
+.slot_icon:hover {
+  border-color: #368bb5;
+  transform: scale(1.05);
+}
+
+/* 슬롯 이미지 (픽셀 아트) */
+.slot_image {
+  image-rendering: pixelated;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: crisp-edges;
+  -ms-interpolation-mode: nearest-neighbor;
+}
+
+/* 슬롯 라벨 */
+.slot_label {
+  font-size: 10px;
+  color: #757575;
+  text-align: center;
+  white-space: nowrap;
+  font-weight: 500;
+}
+
+/* 캐릭터 이미지 */
+.character_img {
+  width: 180px;
   height: 180px;
   position: relative;
 }
 
+/* 유저 정보 */
 .user_info {
   width: 100%;
-  max-width: 320px;
-  height: 100px;
   display: flex;
   align-items: center;
   flex-direction: column;
-  gap: 12px;
+  gap: 8px;
+  margin-top: 4px;
 }
 
 .user_level {
-  width: 100px;
-  height: 40px;
-  border-radius: 16px;
+  width: 90px;
+  height: 36px;
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
   background-color: #dfedfe;
   color: #368bb5;
-  font-size: 14px;
+  font-size: 13px;
+  font-weight: 500;
 }
 
 .user_name {
-  font-size: 24px;
+  font-size: 22px;
+  font-weight: 600;
 }
 
 .body_bottom {
@@ -96,12 +172,12 @@
 .body_bottom_section {
   width: 100%;
   max-width: 480px;
-  padding: 20px 20px;
+  padding: 16px 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  gap: 20px;
+  gap: 16px;
 }
 
 .info_box {
@@ -134,4 +210,68 @@
 
 .info_item_value {
   font-weight: 600;
+}
+
+/* 모바일 최적화 */
+@media (max-width: 400px) {
+  .body_top_section {
+    max-width: 100%;
+    padding: 12px 16px 8px 16px;
+  }
+
+  .equipment_container {
+    max-width: 100%;
+    gap: 6px;
+  }
+
+  .slot_icon {
+    width: 58px; /* 64px → 58px */
+    height: 58px;
+    padding: 5px;
+  }
+
+  .slot_label {
+    font-size: 9px;
+  }
+
+  .character_img {
+    width: 140px;
+    height: 140px;
+  }
+
+  .user_name {
+    font-size: 20px;
+  }
+
+  .user_level {
+    width: 85px;
+    height: 34px;
+    font-size: 12px;
+  }
+
+  .equipment_side {
+    gap: 6px;
+  }
+}
+
+/* 작은 화면 */
+@media (max-width: 360px) {
+  .slot_icon {
+    width: 52px; /* 58px → 52px */
+    height: 52px;
+    padding: 4px;
+  }
+
+  .character_img {
+    width: 130px;
+    height: 130px;
+  }
+
+  .equipment_container {
+    gap: 4px;
+  }
+
+  .equipment_side {
+    gap: 6px;
+  }
 }
