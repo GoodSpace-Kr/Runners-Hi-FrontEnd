@@ -1,9 +1,13 @@
+"use client";
 import styles from "./LandingPage.module.css";
 import Image from "next/image";
 import { FcGoogle } from "react-icons/fc";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 export default function LandingPage() {
+  const router = useRouter();
+
   return (
     <div className={styles.page}>
       <div className={styles.container}>
@@ -26,18 +30,26 @@ export default function LandingPage() {
           </div>
 
           <div className={styles.button_section}>
-            <Link href="/localLogin" className={styles.local_login_button}>
+            <button className={styles.local_login_button} onClick={() => router.push("/homePage")}>
               로그인
-            </Link>
-            <div className={styles.google_login_button}>
+            </button>
+            <button className={styles.google_login_button} onClick={() => router.push("/homePage")}>
               <FcGoogle />
               Google 로그인
-            </div>
+            </button>
           </div>
 
-          <div className={styles.sub_title_section}>
+          {/*<div className={styles.sub_title_section}>
             <p className={styles.sub_title_sentence}>러너스하이에서 귀여운 러너 캐릭터와 함께</p>
             <p className={styles.sub_title_sentence}>오늘의 러닝을 시작하세요</p>
+          </div>*/}
+
+          <div className={styles.sub_title_section}>
+            <p className={styles.sub_title_sentence}>
+              이 사이트는 현재 개발중인 데모 버전입니다.
+              <br />
+              로그인 및 회원가입은 실제 인증 없이 구현되어 있습니다.
+            </p>
           </div>
         </div>
       </div>
