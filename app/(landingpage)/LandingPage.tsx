@@ -7,12 +7,10 @@ export default function LandingPage() {
   return (
     <div className={styles.page}>
       <div className={styles.container}>
-        {/* 로고 */}
         <div className={styles.logo_section}>
           <Image src="/RunnersHiLogo.png" alt="logo" fill priority style={{ objectFit: "contain" }} />
         </div>
 
-        {/* 소개 */}
         <div className={styles.intro_section}>
           <div className={styles.main_title_section}>
             <p className={styles.main_title_sentence}>매일의 한 걸음이 쌓여</p>
